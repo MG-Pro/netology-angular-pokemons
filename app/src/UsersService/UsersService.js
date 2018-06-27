@@ -1,34 +1,31 @@
 angular
-.module('UserApp')
-.factory('UsersService', function($http) {
+  .module('UserApp')
+  .factory('UsersService', function ($http) {
 
-        return {
+      return {
 
-            getUsers: function() {
-                return $http.get('https://jsonplaceholder.typicode.com/users/');
-            },
+        getUsers: function () {
+          return $http.get('https://jsonplaceholder.typicode.com/users/');
+        },
 
-            getUser: function(userId) {
-                return $http.get('https://jsonplaceholder.typicode.com/users/' + userId);
-            },
+        getUser: function (userId) {
+          return $http.get('https://jsonplaceholder.typicode.com/users/' + userId);
+        },
 
-            createUser: function(userData) {
-                return $http({
-                    method: 'POST',
-                    url: 'https://jsonplaceholder.typicode.com/users/',
-                    data: userData
-                });
-            },
+        createUser: function (userData) {
+          return $http({
+            method: 'POST',
+            url: 'https://jsonplaceholder.typicode.com/users/',
+            data: userData
+          });
+        },
 
-            deleteUser: function(userId) {
-                return $http({
-                    method: 'DELETE',
-                    url: 'https://jsonplaceholder.typicode.com/users/' + userId
-                });
-            }
-
+        deleteUser: function (userId) {
+          return $http({
+            method: 'DELETE',
+            url: 'https://jsonplaceholder.typicode.com/users/' + userId
+          });
         }
-
+      }
     }
-
-);
+  );
