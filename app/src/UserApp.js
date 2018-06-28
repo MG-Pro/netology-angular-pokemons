@@ -17,7 +17,7 @@ angular.module('UserApp')
           templateUrl: 'src/CreateUser/CreateUser.html',
           controller: 'CreateUserCtrl'
         })
-        .when('/edit/:userId', {
+        .when('/edit/:user', {
           templateUrl: 'src/EditUser/EditUser.html',
           controller: 'EditUserCtrl'
         })

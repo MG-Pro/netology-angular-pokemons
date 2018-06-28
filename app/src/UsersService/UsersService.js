@@ -19,7 +19,13 @@ angular
             data: userData
           });
         },
-
+        editUser: function (userData) {
+          return $http({
+            method: 'PUT',
+            url: 'https://jsonplaceholder.typicode.com/users/' + userData.id,
+            data: userData
+          });
+        },
         deleteUser: function (userId) {
           return $http({
             method: 'DELETE',

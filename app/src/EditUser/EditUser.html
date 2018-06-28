@@ -1,12 +1,4 @@
-<style>
-  .ng-dirty.ng-invalid {
-    border-color: #fa787e;
-  }
-  .ng-dirty.ng-valid {
-    border-color: #78fa89;
-  }
-</style>
-<div class="alert alert-success" role="alert" ng-if="creationSuccess">Пользователь {{user.name}}!</div>
+<div class="alert alert-success" role="alert" ng-if="editSuccess">Пользователь {{user.name}} изменен!</div>
 <form name="userForm" novalidate>
   <div class="form-group">
     <label>Имя</label>
@@ -20,5 +12,5 @@
     <label>Email</label>
     <input class="form-control" ng-model="user.email" type="text" placeholder="Email">
   </div>
-  <button type="submit" class="btn btn-default" ng-click="createUser(newUser)" ng-disabled="userForm.$invalid">Сохранить</button>
+  <button type="submit" class="btn btn-default" ng-click="editUser(user)" ng-disabled="userForm.$invalid">Сохранить</button>
 </form>
