@@ -2,10 +2,10 @@
 
 userApp.component('userListItem', {
 
-    bindings: {
-        user: '<'
-    },
+  bindings: {
+    user: '<'
+  },
 
-    templateUrl: './src/UserListItem/UserListItem.html'
+  templateUrl: './src/UserListItem/UserListItem.html'
 
 });
