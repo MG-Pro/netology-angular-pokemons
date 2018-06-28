@@ -1,7 +1,11 @@
 'use strict'
 
-userApp.controller('UserDetailCtrl', function ($scope, $routeParams, UsersService) {
-  $scope.userLoaded = false
+userApp.controller('UserDetailCtrl', function ($scope, $routeParams, UsersService, UserPostsService) {
+  $scope.userLoaded = false;
+
+  $scope.posts = UserPostsService.query({
+    userId: $routeParams['userId']
+  });
 
   $scope.user = UsersService.get({
     userId: $routeParams['userId']

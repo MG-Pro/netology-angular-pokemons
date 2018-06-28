@@ -8,4 +8,4 @@ angular
         method: 'PUT'
       }
     })
-  })
+  });
